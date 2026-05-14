@@ -1,0 +1,101 @@
+Plan for Initial Pseudo CODE
+
+Revisando la estructura del proyecto y archivos disponibles para ubicar el mejor punto de integración del plan.
+
+Read [](file:///c%3A/MPDA/MPDA_Session05_group_assignment)
+
+Read [](file:///c%3A/MPDA/MPDA_Session05_group_assignment/readme.md)
+
+He encontrado que el repositorio actual solo contiene archivos de texto y Python sin código de Grasshopper. Necesito confirmar el entorno objetivo antes de detallar el plan.
+
+Analyzing your answers...
+
+Plan listo para guardar y presentar; incluye pasos claros para Python/Grasshopper.
+
+Created memory file [](file:///c%3A/Users/Nelly/AppData/Roaming/Code/User/workspaceStorage/f248ab936fb5ca7ed006260a299851ad/GitHub.copilot-chat/memory-tool/memories/ZDgzMjMyYWEtY2YwMS00OTZhLTgxMjAtNGY1MTE5YmNlNzRm/plan.md)
+
+## Plan para generar el código de Surface y Voronoi en Python/Grasshopper
+
+TL;DR: crear un script Python para Grasshopper que genere una superficie rectangular, distribuya puntos, calcule Voronoi, obtenga centroides, seleccione celdas cercanas a una curva, remapee valores, escale, haga offsets, genere superficies y extruya.
+
+### Pasos principales
+
+1. Definir entradas
+   - ancho (float)
+   - profundidad (float)
+   - número de puntos N (int)
+   - curva de atracción (Geometry/Curve)
+   - número de puntos más cercanos M (int)
+   - dominio remap start/end (float)
+   - offset distance (float)
+   - altura (float)
+
+2. Crear la superficie rectangular de trabajo
+
+3. Generar N puntos dentro del rectángulo
+
+4. Calcular el diagrama de Voronoi 2D
+
+5. Calcular centroides de cada celda
+
+6. Encontrar los M centros más cercanos a la curva
+
+7. Crear cull pattern y filtrar la lista de Voronoi
+
+8. Remapear las distancias a la curva
+
+9. Escalar las geometrías seleccionadas desde su centro
+
+10. Generar offset de cada geometría Voronoi escalada
+
+11. Crear superficies con Boundary Surface
+
+12. Calcular líneas SDL usando distancia * altura
+
+13. Extruir las superficies resultantes
+
+### Archivos sugeridos
+
+- testnelly.py — posible punto de partida
+- `grasshopper_voronoi.py` — script Python nuevo recomendado
+
+### Verificación
+
+- Comprobar que la superficie y puntos se crean correctamente
+- Confirmar Voronoi y centroides
+- Validar selección de M puntos cercanos a la curva
+- Verificar remapeo, escala, offset, superficies y extrusiones
+
+### Nota
+
+He asumido implementación en Python para Grasshopper/Rhino por el contexto de tu descripción. Si quieres, puedo ahora detallar este plan en una lista de tareas concretas o proponer la estructura exacta del script.
+
+
+
+Plan for Simplified Pseudo CODE
+
+
+Reviewing workspace for existing Voronoi scripts and matching implementation patterns.
+
+Found a strong existing script template for Voronoi in this workspace. Next I’m checking details to align the plan with current code style.
+
+I’ve identified a clean existing implementation and will frame the new plan directly around it.
+
+Updated memory file plan.md
+
+Plan Created
+I updated the session plan with a clear, actionable implementation outline for the simplified instructions.
+
+What the plan includes
+Rectangle domain from width and depth
+Point population with n_points
+Voronoi cell generation
+Centroid calculation
+Cell offset using offset_distance
+Random extrusion height between min_height and max_height
+Planar surface creation and extrusion
+File reference
+testdavid2.py
+Plan location
+/memories/session/plan.md
+If you want, I can now move to the implementation phase and write the GhPython script exactly to this plan.

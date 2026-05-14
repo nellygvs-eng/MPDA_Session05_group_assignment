@@ -1,0 +1,61 @@
+Initial Pseudo CODE (Didn´t Work)
+
+Main goal: Generate a parametric Voronoi system that responds to an attractor curve by modifying cell scale and extrusion height.
+
+Surface and Voronoi. 
+
+1. Create a rectangular surface to define the working domain. Based on two given inputs as floats (sliders) that define the “width” and “depth” 
+
+2. Populate Geometry with  N number of points. Create an input for the quantity of “points to be populated” in the rectangle. (integer)
+
+3. Generate 2D Voronoi cells from the generated points to subdivide the surface into irregular polygonal cells.
+
+4 . Calculate the centroid of each Voronoi cell using an Area component to obtain the center point of every polygon.
+
+ Curve as an attractor. 
+
+5. Create an input for a given “curve” from grasshopper that is a geometry.
+
+6. Using the closest points to the curve, define the closest centers of  voronoi to the curve. Using the “N closest points”  input to find the number of points. 
+
+7.Create a cull pattern using the list of  geometry voronoi and the closest point list
+
+8. Create a Remap with the distance values of closest points, create inputs for a construct domain  as “domain start” and “domain end” into the remap to control the remap values 
+
+9. Scale the geometry  voronoi in the output of cull pattern  using the center of each voronoi and the values output of the remap
+
+Cells 
+
+10. Generate an offset from each voronoi geometry.  Create an Input for the “offset distance” 
+
+11. Create a surface with  boundary surface  using the geometry result of the scale
+
+12. Make a multiplication with the distance values of the closest point and a input float call “height” and  generate an Line SDL using  the list of center of each voronoi and the result of the multiplication
+
+13. Generate a extrude with the surfaces
+
+
+
+
+Simplified Pseudo CODE (Working)
+
+INSTRUCTIONS
+
+Surface and Voronoi. 
+
+1. Create a rectangular surface to define the working domain. Based on two given inputs as floats (sliders) that define the “width” and “depth” 
+
+2. Populate Geometry with  N number of points. Create an input for the quantity of “points to be populated” in the rectangle. (integer)
+
+3. Generate 2D Voronoi cells from the generated points to subdivide the surface into irregular polygonal cells.
+
+4 . Calculate the centroid of each Voronoi cell using an Area component to obtain the center point of every polygon.
+
+5.  Create an offset between each cell, according with a new input for this. (float)
+
+6. Create a random height to extrude the cells according with two new inputs: minimum height and maximum height.
+
+
+
+
+
