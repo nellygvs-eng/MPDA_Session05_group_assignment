@@ -1,5 +1,6 @@
 Initial Pseudo CODE (Didn´t Work)
 
+
 Main goal: Generate a parametric Voronoi system that responds to an attractor curve by modifying cell scale and extrusion height.
 
 Surface and Voronoi. 
