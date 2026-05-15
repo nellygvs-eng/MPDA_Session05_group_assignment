@@ -1,5 +1,6 @@
 Plan for Initial Pseudo CODE
 
+
 Revisando la estructura del proyecto y archivos disponibles para ubicar el mejor punto de integración del plan.
 
 Read [](file:///c%3A/MPDA/MPDA_Session05_group_assignment)
